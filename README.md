@@ -7,7 +7,7 @@
 <h2 id="utilisez-une-commande-pour-prouver-que-vous-avez-internet-depuis-la-vm.">Utilisez une commande pour prouver que vous avez internet depuis la VM.</h2>
 <p><code>curl -SL google.com</code></p>
 <p><img src="https://github.com/MrGogo400/TP3-CCNA1/blob/master/images/centos-curl-google.png?raw=true" alt="enter image description here"></p>
-<p>Cette commande va afficher le code source de la page demander.<br>
+<p>Cette commande va afficher le code source de la page demandé.<br>
 En encadré on retrouve le texte <code>Recherche Google</code> qui provient du bouton pour faire une recherche google, ce qui prouve que la VM a internet.</p>
 <h2 id="prouvez-que-votre-pc-hôte-et-la-vm-peuvent-communiquer.">Prouvez que votre PC hôte et la VM peuvent communiquer.</h2>
 <p>Sachant que l’ip du PC hôte est : <strong>192.168.127.1</strong><br>
