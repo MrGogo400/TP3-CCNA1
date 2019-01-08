@@ -41,4 +41,10 @@ rtt min/avg/max/mdev = 0.273/0.684/0.883/0.243 ms
 </code></pre>
 <h4 id="affichez-votre-table-de-routage-sur-la-vm-et-expliquez-chacune-des-lignes.">Affichez votre table de routage <strong>sur la VM</strong> et expliquez chacune des lignes.</h4>
 <p><code>ip route</code></p>
+<hr>
+<pre><code>default via 10.0.2.2 dev enp0s3 proto dhcp metric 100
+
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100
+192.168.127.8/24 dev enp0s8 proto kernel scope link src 192.168.127.10 metric 10
+</code></pre>
 
