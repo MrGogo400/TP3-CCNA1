@@ -12,6 +12,7 @@ et que l’ip de la VM est : <strong>192.168.127.10</strong><br>
 On peux prouver que la PC hôte et la VM peuvent communiquer en faisant un ping entre les 2 machines.</p>
 <p>Sur le PC hôte :<br>
 <code>Ping 192.168.127.10</code></p>
+<hr>
 <pre><code>Envoi d’une requête 'Ping'  192.168.127.10 avec 32 octets de données :
 Réponse de 192.168.127.10 : octets=32 temps&lt;1ms TTL=64
 Réponse de 192.168.127.10 : octets=32 temps&lt;1ms TTL=64
@@ -25,6 +26,7 @@ Durée approximative des boucles en millisecondes :
 </code></pre>
 <p>Sur la VM :</p>
 <p><code>ping 192.168.127.1</code></p>
+<hr>
 <pre><code>PING 192.168.12?.1 (192.168.127.1) 56(84) bytes of data.
 
 4 bytes from 192.168.127.1: icmp_seq=1 ttl=128 time=0.273 ms
