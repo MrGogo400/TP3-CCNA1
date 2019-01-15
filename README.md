@@ -123,4 +123,8 @@ Destination réseau    Masque réseau  Adr. passerelle   Adr. interface Métriqu
     216.58.204.110
 </code></pre>
 <p>En ajoutant <code>+short</code> a la commande <code>dig</code> cela nous permet d’afficher que l’ip.</p>
+<h2 id="firewall">3. Firewall</h2>
+<h3 id="a.-ssh-">A. SSH :</h3>
+<p>Après avoir modifier le port d’écoute du serveur SSH je me retrouve avec ceci :</p>
+<p><img src="https://github.com/MrGogo400/TP3-CCNA1/blob/master/images/ss-4nlp.png?raw=true" alt=""></p>
 
