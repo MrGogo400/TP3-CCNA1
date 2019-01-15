@@ -61,7 +61,7 @@ rtt min/avg/max/mdev = 0.273/0.684/0.883/0.243 ms
 <pre><code>192.168.127.8/24 dev enp0s8 proto kernel scope link src 192.168.127.10 metric 10
 </code></pre>
 <h2 id="faire-joujou-avec-quelques-commandes">5. Faire joujou avec quelques commandes</h2>
-<p>Afficher la table de routage</p>
+<h3 id="afficher-la-table-de-routage">Afficher la table de routage</h3>
 <p>De l’hôte :</p>
 <pre><code>IPv4 Table de routage
 ===========================================================================
@@ -108,4 +108,19 @@ Destination réseau    Masque réseau  Adr. passerelle   Adr. interface Métriqu
 <blockquote>
 <p>192.168.127.8/24 dev enp0s8 proto kernel scope link src 192.168.127.10 metric 10</p>
 </blockquote>
+<h3 id="depuis-la-vm-utilisez--curl--ou--wget-pour-télécharger-un-fichier-sur-internet">Depuis la VM utilisez  <code>curl</code>  (ou  <code>wget</code>) pour télécharger un fichier sur internet</h3>
+<pre><code>curl endless.horse
+</code></pre>
+<p><img src="https://github.com/MrGogo400/TP3-CCNA1/blob/master/images/curl-horse.png?raw=true" alt=""></p>
+<p>On remarque un cheval ce qui veux dire que le fichier html du site <code>endless.horse</code> a étais télécharger.</p>
+<h3 id="depuis-la-vm-utilisez-dig-pour-connaître-lip-de-">Depuis la VM utilisez <code>dig</code> pour connaître l’IP de :</h3>
+<p>De <a href="http://ynov.com">ynov.com</a> :</p>
+<pre><code>[hugo@localhost network-scripts]$ dig ynov.com +short
+217.70.184.38
+</code></pre>
+<p>De <a href="http://google.com">google.com</a> :</p>
+<pre><code>[hugo@localhost network-scripts]$ dig ynov.com +short
+    216.58.204.110
+</code></pre>
+<p>En ajoutant <code>+short</code> a la commande <code>dig</code> cela nous permet d’afficher que l’ip.</p>
 
