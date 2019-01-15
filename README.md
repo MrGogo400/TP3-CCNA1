@@ -125,6 +125,12 @@ Destination réseau    Masque réseau  Adr. passerelle   Adr. interface Métriqu
 <p>En ajoutant <code>+short</code> a la commande <code>dig</code> cela nous permet d’afficher que l’ip.</p>
 <h2 id="firewall">3. Firewall</h2>
 <h3 id="a.-ssh-">A. SSH :</h3>
+<h4 id="modifier-le-port-découte-du-serveur-ssh">Modifier le port d’écoute du serveur SSH</h4>
 <p>Après avoir modifier le port d’écoute du serveur SSH je me retrouve avec ceci :</p>
 <p><img src="https://github.com/MrGogo400/TP3-CCNA1/blob/master/images/ss-4nlp.png?raw=true" alt=""></p>
+<h4 id="sans-autre-modification-la-connexion-devrait-échouer">Sans autre modification, la connexion devrait échouer</h4>
+<p>Effectivement la connexion échoue, la raison est que nous n’avons pas ajouter le port 2222 dans le firewall donc la VM empêchent la connexion par ce port.</p>
+<p>Pour résoudre ce problème il suffit d’ajouter le port dans le firewall avec la commande :</p>
+<pre><code>firewall-cmd --add-port=2222/tcp --permanent 
+</code></pre>
 
