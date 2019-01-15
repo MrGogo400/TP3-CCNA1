@@ -133,4 +133,9 @@ Destination réseau    Masque réseau  Adr. passerelle   Adr. interface Métriqu
 <p>Pour résoudre ce problème il suffit d’ajouter le port dans le firewall avec la commande :</p>
 <pre><code>firewall-cmd --add-port=2222/tcp --permanent 
 </code></pre>
+<p>on oublie pas de reload pour que les modifications prennent effets avec la commande :</p>
+<pre><code>firewall-cmd --reload
+</code></pre>
+<h4 id="b.--netcat">B.  netcat</h4>
+<p><img src="https://github.com/MrGogo400/TP3-CCNA1/blob/master/images/netcat.png?raw=true" alt=""></p>
 
