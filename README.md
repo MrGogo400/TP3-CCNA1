@@ -30,7 +30,7 @@ Durée approximative des boucles en millisecondes :
 <p>Sur la VM :</p>
 <p><code>ping 192.168.127.1</code></p>
 <hr>
-<pre><code>PING 192.168.12?.1 (192.168.127.1) 56(84) bytes of data.
+<pre><code>PING 192.168.127.1 (192.168.127.1) 56(84) bytes of data.
 
 4 bytes from 192.168.127.1: icmp_seq=1 ttl=128 time=0.273 ms
 4 bytes from 192.168.127.1: icmp_seq=2 ttl=128 time=0.816 ms
@@ -61,4 +61,51 @@ rtt min/avg/max/mdev = 0.273/0.684/0.883/0.243 ms
 <pre><code>192.168.127.8/24 dev enp0s8 proto kernel scope link src 192.168.127.10 metric 10
 </code></pre>
 <h2 id="faire-joujou-avec-quelques-commandes">5. Faire joujou avec quelques commandes</h2>
+<p>Afficher la table de routage</p>
+<p>De l’hôte :</p>
+<pre><code>IPv4 Table de routage
+===========================================================================
+Itinéraires actifs :
+Destination réseau    Masque réseau  Adr. passerelle   Adr. interface Métrique
+          0.0.0.0          0.0.0.0      10.33.3.253        10.33.0.1     45
+        10.33.0.0    255.255.252.0         On-link         10.33.0.1    301
+        10.33.0.1  255.255.255.255         On-link         10.33.0.1    301
+      10.33.3.255  255.255.255.255         On-link         10.33.0.1    301
+        127.0.0.0        255.0.0.0         On-link         127.0.0.1    331
+        127.0.0.1  255.255.255.255         On-link         127.0.0.1    331
+  127.255.255.255  255.255.255.255         On-link         127.0.0.1    331
+      169.254.0.0      255.255.0.0         On-link    169.254.53.145    281
+   169.254.53.145  255.255.255.255         On-link    169.254.53.145    281
+  169.254.255.255  255.255.255.255         On-link    169.254.53.145    281
+     192.168.56.0    255.255.255.0         On-link      192.168.56.1    281
+     192.168.56.1  255.255.255.255         On-link      192.168.56.1    281
+   192.168.56.255  255.255.255.255         On-link      192.168.56.1    281
+    192.168.127.0    255.255.255.0         On-link     192.168.127.1    281
+    192.168.127.1  255.255.255.255         On-link     192.168.127.1    281
+  192.168.127.255  255.255.255.255         On-link     192.168.127.1    281
+        224.0.0.0        240.0.0.0         On-link         127.0.0.1    331
+        224.0.0.0        240.0.0.0         On-link      192.168.56.1    281
+        224.0.0.0        240.0.0.0         On-link     192.168.127.1    281
+        224.0.0.0        240.0.0.0         On-link    169.254.53.145    281
+        224.0.0.0        240.0.0.0         On-link         10.33.0.1    301
+  255.255.255.255  255.255.255.255         On-link         127.0.0.1    331
+  255.255.255.255  255.255.255.255         On-link      192.168.56.1    281
+  255.255.255.255  255.255.255.255         On-link     192.168.127.1    281
+  255.255.255.255  255.255.255.255         On-link    169.254.53.145    281
+  255.255.255.255  255.255.255.255         On-link         10.33.0.1    301
+===========================================================================
+</code></pre>
+<p>La ligne mettant en évidence qui permet de discuter avec le host-only est :</p>
+<blockquote>
+<p>192.168.127.1  255.255.255.255         On-link     192.168.127.1    281</p>
+</blockquote>
+<p>De la VM :</p>
+<pre><code>default via 10.0.2.2 dev enp0s3 proto dhcp metric 100
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100
+192.168.127.8/24 dev enp0s8 proto kernel scope link src 192.168.127.10 metric 10
+</code></pre>
+<p>La ligne mettant en évidence qui permet de discuter avec le host-only est :</p>
+<blockquote>
+<p>192.168.127.8/24 dev enp0s8 proto kernel scope link src 192.168.127.10 metric 10</p>
+</blockquote>
 
